@@ -10,6 +10,15 @@ This project is a "rewrite" of the horse race exercise in Project 3. The goal of
 
 ## Make File
 
+- horse.o compiles horse.cpp
+- race.o compiles race.cpp
+- main.o compiles main.cpp
+- game.o compiles horse.o race.o main.o into single executable called horseRace
+- clean clears *.o and horseRace
+- run runs the program
+- git does git status and git add .
+- push pushes to git
+  
 ## Horse Class
 
 Private:
