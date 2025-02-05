@@ -12,10 +12,10 @@ class Horse {
 		int id;
 	public:
 		Horse();
-		init(int id, int trackLength);
-		void printLane();
-		void advance();
-		bool isWinner();
+		void init(int id, int trackLength);
+		void printLane(int horsePosition, int trackLength);
+		void advance(int horsePosition);
+		bool isWinner(int horsePosition, int trackLength);
 		void run();
 }; // end class def
 
