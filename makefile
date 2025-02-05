@@ -23,3 +23,6 @@ debug: game
 git: 
 	git status
 	git add .
+
+push:
+	git push
