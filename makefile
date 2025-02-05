@@ -19,3 +19,7 @@ run: game
 
 debug: game
 	gdb game
+
+git: 
+	git status
+	git add .
