@@ -83,4 +83,31 @@ Initialize keepGoing to be true. While keepGoing:
 
 ## Race Class
 
+Private:
+
+- horses[] uses Horse() to initialize Horse class. 
+- trackLength is a constant integer that denotes the length of the race track. 
+- numHorses is a constant integer that denotes the number of horses in the race. 
+
+Public:
+
+- Race() is the constructor
+- run() is a method that runs the race and returns nothing. 
+
+
+Initialize an array of horses using Horses(). Initialize a constant integer
+trackLength and set value to 15. Initialize a constant integer numHorses and set value to 5. 
+
+**run()**
+
+```
+Start at i = 0. For i in numHorses:
+	Horse.run()
+```
+
 ## Main
+
+```
+Race()
+Race.run()
+```
