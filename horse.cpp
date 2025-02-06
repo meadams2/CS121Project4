@@ -8,12 +8,14 @@ std::random_device rd;
 std::uniform_int_distribution<int> dist(0, 1);
 
 Horse::Horse(){
-	int Horse::horsePosition = 0;
+	 Horse::horsePosition = 0;
+	 Horse::trackLength = 15;
+	 Horse::id = 0;
 } //End constructor
 
 void Horse::init(int id, int trackLength){
-	int Horse::id = id;
-	int Horse::trackLength = trackLength;
+	id = id;
+	trackLength = trackLength;
 } //End init
 
 void Horse::advance(int horsePosition){
@@ -26,7 +28,7 @@ void Horse::advance(int horsePosition){
 void Horse::printLane(int horsePosition, int trackLength){
 	for (int i = 0; i < trackLength; i++){
 		if (i == horsePosition){
-			std::cout << Horse::id;
+			std::cout << id;
 		}
 		else{
 			std::cout << "." << std::endl;
@@ -37,7 +39,7 @@ void Horse::printLane(int horsePosition, int trackLength){
 bool Horse::isWinner(int horsePosition, int trackLength){
 	bool result = false;
 	if (horsePosition > trackLength){
-		std::cout << Horse::id << "is the winner!";
+		std::cout << id << "is the winner!";
 		result = true;
 	}//end condition
 
@@ -47,13 +49,10 @@ bool Horse::isWinner(int horsePosition, int trackLength){
 void Horse::run(){
 	bool keepGoing = true;
 	while (keepGoing){
-		Horse::advance(int horsePosition);
-		Horse::printLane(int horsePosition, int trackLength);
-		if (Horse::isWinner(int horsePosition, int trackLength)){
+		advance(horsePosition);
+		printLane(horsePosition, trackLength);
+		if (isWinner(horsePosition, trackLength)){
 			keepGoing = false;
 		}//end condition
 	}//end while loop
 }//end run()
-
-
-

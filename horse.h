@@ -4,6 +4,7 @@
 #define HORSE_H_EXISTS
 
 #include <string>
+#include <random>
 
 class Horse {
 	private:
