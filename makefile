@@ -1,5 +1,5 @@
 game: horse.o race.o main.o
-	g++ -g horse.o race.o main.o -o horseRace
+	g++ -g horse.o race.o main.o -o game
 
 main.o: horse.h race.h main.cpp
 	g++ -c -g main.cpp

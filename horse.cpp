@@ -18,25 +18,26 @@ void Horse::init(int id, int trackLength){
 	trackLength = trackLength;
 } //End init
 
-void Horse::advance(int horsePosition){
+void Horse::advance(){
 	int coin = dist(rd);
 	if (coin == 1){
 		horsePosition ++;
 	}//end if
 }//end advance
 
-void Horse::printLane(int horsePosition, int trackLength){
+void Horse::printLane(){
 	for (int i = 0; i < trackLength; i++){
 		if (i == horsePosition){
 			std::cout << id;
 		}
 		else{
-			std::cout << "." << std::endl;
+			std::cout << "." ;
 		}//end condition
 	}//end for loop
+	std::cout << std::endl;
 }//end printLane
 
-bool Horse::isWinner(int horsePosition, int trackLength){
+bool Horse::isWinner(){
 	bool result = false;
 	if (horsePosition > trackLength){
 		std::cout << id << "is the winner!";
@@ -49,9 +50,9 @@ bool Horse::isWinner(int horsePosition, int trackLength){
 void Horse::run(){
 	bool keepGoing = true;
 	while (keepGoing){
-		advance(horsePosition);
-		printLane(horsePosition, trackLength);
-		if (isWinner(horsePosition, trackLength)){
+		advance();
+		printLane();
+		if (isWinner()){
 			keepGoing = false;
 		}//end condition
 	}//end while loop
