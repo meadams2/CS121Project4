@@ -8,7 +8,7 @@
 
 class Horse {
 	private:
-		int horsePosition;
+		int position;
 		int trackLength;
 		int id;
 	public:

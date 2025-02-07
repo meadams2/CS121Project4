@@ -8,26 +8,25 @@ std::random_device rd;
 std::uniform_int_distribution<int> dist(0, 1);
 
 Horse::Horse(){
-	 Horse::horsePosition = 0;
+	 Horse::position = 0;
 	 Horse::trackLength = 15;
 	 Horse::id = 0;
 } //End constructor
 
 void Horse::init(int id, int trackLength){
-	id = id;
-	trackLength = trackLength;
+	Horse::position = 0;
+	Horse::id = id;
+	Horse::trackLength = trackLength;
 } //End init
 
 void Horse::advance(){
 	int coin = dist(rd);
-	if (coin == 1){
-		horsePosition ++;
-	}//end if
+	Horse::position += coin;
 }//end advance
 
 void Horse::printLane(){
 	for (int i = 0; i < trackLength; i++){
-		if (i == horsePosition){
+		if (i == position){
 			std::cout << id;
 		}
 		else{
@@ -39,7 +38,7 @@ void Horse::printLane(){
 
 bool Horse::isWinner(){
 	bool result = false;
-	if (horsePosition > trackLength){
+	if (position > trackLength){
 		std::cout << id << "is the winner!";
 		result = true;
 	}//end condition
