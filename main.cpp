@@ -1,8 +1,9 @@
 //main.cpp
 #include <iostream>
 #include "horse.h"
+#include "race.h"
 
 int main(){
-	Horse t;
-	t.run();
+	Race r;
+	r.run();
 }//end main
